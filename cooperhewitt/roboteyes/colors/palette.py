@@ -21,7 +21,7 @@ def extract_roygbiv(path, reference):
     return {
         'reference-closest': reference,
         'average': average,
-        'palette': palette
+        'palette': list(palette)
     }
 
 if __name__ == '__main__':
@@ -29,4 +29,4 @@ if __name__ == '__main__':
     import sys
     path = sys.argv[1]
 
-    print extract_roygbiv(path, 'css4')
+    print(extract_roygbiv(path, 'css4'))
